@@ -16,6 +16,11 @@ import { ArticulosComponent } from './articulos/articulos.component';
 import { DepositosComponent } from './depositos/depositos.component';
 // Rutas
 
+import {MatCardModule} from '@angular/material/card';
+import { MatMenuModule, MatFormFieldModule } from '@angular/material';
+import { DataService } from './services/data.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,9 +38,12 @@ import { DepositosComponent } from './depositos/depositos.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    APP_ROUTES
+    APP_ROUTES,
+    MatCardModule,
+    MatFormFieldModule,
+    MatMenuModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
